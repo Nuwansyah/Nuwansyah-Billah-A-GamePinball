@@ -20,8 +20,18 @@ public class MainMenuUIController : MonoBehaviour
         SceneManager.LoadScene("Game");
     }
 
-    private void ExitGame()
+    public void ExitGame()
     {
         Application.Quit();
+    }
+
+    public void MainMenu()
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
+    public void Credit()
+    {
+        SceneManager.LoadScene("Credit");
     }
 }

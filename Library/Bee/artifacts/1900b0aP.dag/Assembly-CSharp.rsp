@@ -320,6 +320,7 @@
 "Assets/Scripts/ScoreManager.cs"
 "Assets/Scripts/SFXAudioController.cs"
 "Assets/Scripts/SwitchController.cs"
+"Assets/Scripts/test.cs"
 "Assets/Scripts/TriggerGameOver.cs"
 "Assets/Scripts/TriggerZoomIn.cs"
 "Assets/Scripts/TriggerZoomOut.cs"

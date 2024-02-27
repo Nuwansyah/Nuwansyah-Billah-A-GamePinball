@@ -10,7 +10,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{E153F084-2D89-85FC-90E2-233D812CEFAB}</ProjectGuid>
+    <ProjectGuid>{82203340-718B-6F43-0832-FFBEC009789A}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -70,6 +70,7 @@
     <Compile Include="Assets\Scripts\TriggerGameOver.cs" />
     <Compile Include="Assets\Scripts\LauncherController.cs" />
     <Compile Include="Assets\Scripts\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\test.cs" />
     <Compile Include="Assets\Scripts\TriggerZoomIn.cs" />
     <Compile Include="Assets\Scripts\GameOverUiController.cs" />
     <Compile Include="Assets\Scripts\MainMenuUiController.cs" />

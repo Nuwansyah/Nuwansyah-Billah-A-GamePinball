@@ -19,6 +19,7 @@ ScriptsOnlyBuild:
     - TriggerZoomOut
     - VFXController
     - VFXManager
+    - test
     Unity.Rider.Editor.dll:
     - Packages.Rider.Editor.UnitTesting.CallbackData
     Unity.TextMeshPro:
@@ -35,8 +36,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -66,7 +69,9 @@ ScriptsOnlyBuild:
     - TMPro.TMP_Style
     - TMPro.VertexGradient
     UnityEngine.CoreModule:
+    - UnityEngine.Events.ArgumentCache
     - UnityEngine.Events.PersistentCallGroup
+    - UnityEngine.Events.PersistentListenerMode
     UnityEngine.TextCoreFontEngineModule:
     - UnityEngine.TextCore.FaceInfo
     - UnityEngine.TextCore.Glyph
@@ -79,8 +84,78 @@ ScriptsOnlyBuild:
     - UnityEngine.UI.MaskableGraphic/CullStateChangedEvent
     - UnityEngine.UI.Navigation
     - UnityEngine.UI.SpriteState
-  methodsToPreserve: []
+  methodsToPreserve:
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuUIController
+    methodName: Credit
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuUIController
+    methodName: ExitGame
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuUIController
+    methodName: PlayGame
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuUIController
+    methodName: MainMenu
+  - assembly: Assembly-CSharp
+    fullTypeName: MainMenuUIController
+    methodName: MainMenu
   sceneClasses:
+    Assets/Scenes/Credit.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 21
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 48
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 89
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 108
+      Script: {instanceID: 0}
+    - Class: 114
+      Script: {instanceID: 1600}
+    - Class: 114
+      Script: {instanceID: 2206}
+    - Class: 114
+      Script: {instanceID: 2598}
+    - Class: 114
+      Script: {instanceID: 2802}
+    - Class: 114
+      Script: {instanceID: 3088}
+    - Class: 114
+      Script: {instanceID: 5010}
+    - Class: 114
+      Script: {instanceID: 5554}
+    - Class: 114
+      Script: {instanceID: 5704}
+    - Class: 114
+      Script: {instanceID: 6022}
+    - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    - Class: 213
+      Script: {instanceID: 0}
+    - Class: 222
+      Script: {instanceID: 0}
+    - Class: 223
+      Script: {instanceID: 0}
+    - Class: 224
+      Script: {instanceID: 0}
     Assets/Scenes/Game.unity:
     - Class: 1
       Script: {instanceID: 0}
@@ -99,8 +174,6 @@ ScriptsOnlyBuild:
     - Class: 43
       Script: {instanceID: 0}
     - Class: 48
-      Script: {instanceID: 0}
-    - Class: 49
       Script: {instanceID: 0}
     - Class: 54
       Script: {instanceID: 0}
@@ -135,7 +208,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 2114}
     - Class: 114
-      Script: {instanceID: 2180}
+      Script: {instanceID: 2206}
     - Class: 114
       Script: {instanceID: 2598}
     - Class: 114
@@ -153,11 +226,7 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 4014}
     - Class: 114
-      Script: {instanceID: 4072}
-    - Class: 114
       Script: {instanceID: 4094}
-    - Class: 114
-      Script: {instanceID: 4322}
     - Class: 114
       Script: {instanceID: 4956}
     - Class: 114
@@ -181,9 +250,9 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 6022}
     - Class: 114
-      Script: {instanceID: 7032}
+      Script: {instanceID: 7034}
     - Class: 114
-      Script: {instanceID: 7276}
+      Script: {instanceID: 7278}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -225,6 +294,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 48
       Script: {instanceID: 0}
+    - Class: 49
+      Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
     - Class: 89
@@ -236,6 +307,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 1600}
     - Class: 114
+      Script: {instanceID: 2180}
+    - Class: 114
       Script: {instanceID: 2206}
     - Class: 114
       Script: {instanceID: 2598}
@@ -244,6 +317,10 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 3088}
     - Class: 114
+      Script: {instanceID: 4072}
+    - Class: 114
+      Script: {instanceID: 4322}
+    - Class: 114
       Script: {instanceID: 5010}
     - Class: 114
       Script: {instanceID: 5554}
@@ -251,6 +328,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 5704}
     - Class: 114
       Script: {instanceID: 6022}
+    - Class: 114
+      Script: {instanceID: 6574}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -1038,6 +1117,12 @@ ScriptsOnlyBuild:
     className: Physics2DRaycaster
   - hash:
       serializedVersion: 2
+      Hash: 9765bef2a943de90c6abcd587b2f487f
+    assemblyName: Assembly-CSharp
+    namespaceName: 
+    className: test
+  - hash:
+      serializedVersion: 2
       Hash: 19824dd35debb3fff0983df49f8359ab
     assemblyName: UnityEngine.TestRunner
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
@@ -1200,6 +1285,7 @@ ScriptsOnlyBuild:
     className: UnityOnSliderValueChangedMessageListener
   platform: 19
   scenePathNames:
-  - Assets/Scenes/Game.unity
   - Assets/Scenes/Main Menu.unity
+  - Assets/Scenes/Game.unity
+  - Assets/Scenes/Credit.unity
   playerPath: C:/1.Projek/UNITY Project/New folder/3D Pinball.exe
